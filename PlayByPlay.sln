@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayByPlay", "PlayByPlay\PlayByPlay.csproj", "{5324D3B7-F1DA-4A91-BAC6-A2513FF9BE3B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api", "Api\PlayByPlayApi.csproj", "{5324D3B7-F1DA-4A91-BAC6-A2513FF9BE3B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleClient", "ConsoleClient\ConsoleClient.csproj", "{B84666C8-D2FE-4C89-86ED-F68D579D935E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "Service\Service.csproj", "{F9027502-DFE0-4ED5-98E2-AFE375C7E94B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{5324D3B7-F1DA-4A91-BAC6-A2513FF9BE3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5324D3B7-F1DA-4A91-BAC6-A2513FF9BE3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5324D3B7-F1DA-4A91-BAC6-A2513FF9BE3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B84666C8-D2FE-4C89-86ED-F68D579D935E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B84666C8-D2FE-4C89-86ED-F68D579D935E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B84666C8-D2FE-4C89-86ED-F68D579D935E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B84666C8-D2FE-4C89-86ED-F68D579D935E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9027502-DFE0-4ED5-98E2-AFE375C7E94B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9027502-DFE0-4ED5-98E2-AFE375C7E94B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9027502-DFE0-4ED5-98E2-AFE375C7E94B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9027502-DFE0-4ED5-98E2-AFE375C7E94B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

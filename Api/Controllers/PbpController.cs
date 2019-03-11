@@ -1,43 +1,38 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using PlayByPlay.Dtos;
-using PlayByPlay.Models;
+using PlayByPlay.Service;
+using PlayByPlay.Service.Dtos;
 
-namespace PlayByPlay.Controllers
+namespace PlayByPlay.Api.Controllers
 {
     [Route("[controller]")]
     [ApiController]
     public class PbpController : ControllerBase
     {
+        public IGameManager GameManager { get; }
+
+        public PbpController(IGameManager gameManager)
+        {
+            GameManager = gameManager;
+        }
+
         [HttpGet]
         public JsonResult GetUpdate()
         {
-            if (_game == null)
-                return GameNotSet();
-
-            var latestUpdate = _game.LatestUpdate();
+            var latestUpdate = GameManager.LatestUpdate();
             return new JsonResult(latestUpdate);
         }
 
         [HttpGet("all")]
         public JsonResult GetGameInformation()
         {
-            if (_game == null)
-                return GameNotSet();
-
-            return new JsonResult(_game);
+            return new JsonResult(GameManager);
         }
 
         [HttpPost("source/start")]
         public JsonResult PostGameInformation([FromBody] GameUpdateDto dto)
         {
-            lock (_game)
-                _game = new Game(dto);
-
+            GameManager.Start(dto);
             return new JsonResult("Game Updated")
             {
                 StatusCode = 202 // Accepted
@@ -47,24 +42,11 @@ namespace PlayByPlay.Controllers
         [HttpPost("source/update")]
         public JsonResult PostUpdate([FromBody] GameUpdateDto dto)
         {
-            if (_game == null)
-                return GameNotSet();
-
-            _game.Update(dto);
+            GameManager.Update(dto);
             return new JsonResult("Game Created")
             {
                 StatusCode = 201 // Created
             };
         }
-
-        private JsonResult GameNotSet()
-        {
-            return new JsonResult("Game not set")
-            {
-                StatusCode = 200 // OK
-            };
-        }
-
-        private static Game _game;
     }
 }

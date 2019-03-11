@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/PlayByPlay/PlayByPlay.csproj"
+                "${workspaceFolder}/Api/PlayByPlayApi.csproj"
             ],
             "problemMatcher": "$msCompile"
         }

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace PlayByPlay.Models
+namespace PlayByPlay.Service.Models
 {
     public class Player
     {

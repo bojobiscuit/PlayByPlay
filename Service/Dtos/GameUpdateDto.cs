@@ -1,10 +1,6 @@
-﻿using PlayByPlay.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using PlayByPlay.Service.Models;
 
-namespace PlayByPlay.Dtos
+namespace PlayByPlay.Service.Dtos
 {
     public class GameUpdateDto
     {

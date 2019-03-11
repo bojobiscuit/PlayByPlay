@@ -10,9 +10,9 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/PlayByPlay/bin/Debug/netcoreapp2.2/PlayByPlay.dll",
+            "program": "${workspaceFolder}/Api/bin/Debug/netcoreapp2.2/Api.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/PlayByPlay",
+            "cwd": "${workspaceFolder}/Api",
             "stopAtEntry": false,
             "internalConsoleOptions": "openOnSessionStart",
             "launchBrowser": {
